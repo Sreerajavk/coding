@@ -26,3 +26,30 @@ int fib(int n) {
 ### 3. Direct formula for small values of 'n'
 
 ![Equation](eqn.png)
+
+## GCD and LCM
+GCD and LCM can be calculated by using **euclidean** equation.
+
+### GCD
+``` 
+int gcd(int a, int b) {
+  if(b==0)
+    return a;
+  else
+    return gcd(b , a % b);
+}
+``` 
+
+### LCM
+LCM( a , b ) = ( a * b ) / gcd( a ,b )
+
+## Pattern in Fibonacci series
+
+For any integer m ≥ 2, the sequence **Fn mod n** is periodic. The period always
+starts with 01 and is known as Pisano period.
+
+For n = 2 , 011 (period = 3 )
+
+For n = 3 , 01120221 (period = 8)
+
+> F<sub>0</sub><sup>2</sup> + F<sub>1</sub><sup>2</sup> + · · · + F<sub>n</sub><sup>2</sup>  = F<sub>n</sub> * F<sub>n+1</sub>
