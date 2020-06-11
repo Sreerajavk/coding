@@ -7,7 +7,7 @@ void bin(string s , int n)
 { 
     int i; 
     for (i = 1 << n -1; i > 0; i = i / 2) {
-        // cout << i << "\n";
+        cout << i << "\n";
         (n & i)? cout<<"1": cout<< "0"; 
     }
 }
