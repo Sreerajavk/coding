@@ -7,7 +7,7 @@ Find whether consecutive subarray sum equal to given sum
 
 int solve(vector<int> arr , int n , int sum){
 
-	int cum_sum1 = 0 , cum_sum2 = 0;
+	int cum_sum1 = 0 , cum_sum2 = 0 , cum_sum=0;
 	for(int i = 0; i < n; i++){
 		cum_sum1 += arr[i];
 		cum_sum2 = 0;
@@ -20,6 +20,23 @@ int solve(vector<int> arr , int n , int sum){
 		}
 	}
 	return -1;
+
+	/*
+	another approach
+
+	for(int i = 0; i < n; i++){
+		for(int j = i; j < n; j++){
+			cum_sum += arr[j];
+			if(sum == cum_sum)
+				return 0;
+
+			if( cum_sum > sum)
+				break;
+		}
+	}
+	return -1;
+
+	*/
 }
 
 int main(){
