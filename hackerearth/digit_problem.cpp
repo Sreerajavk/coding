@@ -22,7 +22,7 @@ int main(){
      s;
     int k , index = 0 , i;
     cin >> s >> k;
-    i=0;
+    i = 0;
     while (i < k)
     {
        if(s[index] != '9'){
